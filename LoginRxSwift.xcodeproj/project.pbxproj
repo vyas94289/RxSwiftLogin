@@ -3,7 +3,7 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 50;
+	objectVersion = 51;
 	objects = {
 
 /* Begin PBXBuildFile section */
@@ -14,6 +14,13 @@
 		BD23568C259C81B500CDBB12 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BD23568A259C81B500CDBB12 /* Main.storyboard */; };
 		BD23568E259C81B700CDBB12 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = BD23568D259C81B700CDBB12 /* Assets.xcassets */; };
 		BD235691259C81B700CDBB12 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BD23568F259C81B700CDBB12 /* LaunchScreen.storyboard */; };
+		BD33B64825A0465100A2505E /* EmailValidationModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD33B64725A0465100A2505E /* EmailValidationModel.swift */; };
+		BD33B64A25A046BF00A2505E /* ValidationViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD33B64925A046BF00A2505E /* ValidationViewModel.swift */; };
+		BD33B64C25A04A7D00A2505E /* PasswordValidationModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD33B64B25A04A7D00A2505E /* PasswordValidationModel.swift */; };
+		BD33B64F25A08A1900A2505E /* UIButton+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD33B64E25A08A1900A2505E /* UIButton+Extension.swift */; };
+		BD33B65225A08DC600A2505E /* UserServices.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD33B65125A08DC600A2505E /* UserServices.swift */; };
+		BD33B65425A099F400A2505E /* UIAlertViewController+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD33B65325A099F400A2505E /* UIAlertViewController+Extension.swift */; };
+		BD8736FB25A0348C005795DB /* LoginViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD8736FA25A0348C005795DB /* LoginViewModel.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -28,6 +35,13 @@
 		BD23568D259C81B700CDBB12 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		BD235690259C81B700CDBB12 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		BD235692259C81B700CDBB12 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		BD33B64725A0465100A2505E /* EmailValidationModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EmailValidationModel.swift; sourceTree = "<group>"; };
+		BD33B64925A046BF00A2505E /* ValidationViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ValidationViewModel.swift; sourceTree = "<group>"; };
+		BD33B64B25A04A7D00A2505E /* PasswordValidationModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PasswordValidationModel.swift; sourceTree = "<group>"; };
+		BD33B64E25A08A1900A2505E /* UIButton+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIButton+Extension.swift"; sourceTree = "<group>"; };
+		BD33B65125A08DC600A2505E /* UserServices.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserServices.swift; sourceTree = "<group>"; };
+		BD33B65325A099F400A2505E /* UIAlertViewController+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIAlertViewController+Extension.swift"; sourceTree = "<group>"; };
+		BD8736FA25A0348C005795DB /* LoginViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewModel.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -48,7 +62,6 @@
 				A9FD73465501E3B3FE1F18DB /* Pods-LoginRxSwift.debug.xcconfig */,
 				5547BC7DF60578F627AABDAB /* Pods-LoginRxSwift.release.xcconfig */,
 			);
-			name = Pods;
 			path = Pods;
 			sourceTree = "<group>";
 		};
@@ -73,15 +86,86 @@
 		BD235683259C81B500CDBB12 /* LoginRxSwift */ = {
 			isa = PBXGroup;
 			children = (
-				BD235684259C81B500CDBB12 /* AppDelegate.swift */,
-				BD235686259C81B500CDBB12 /* SceneDelegate.swift */,
-				BD235688259C81B500CDBB12 /* ViewController.swift */,
-				BD23568A259C81B500CDBB12 /* Main.storyboard */,
-				BD23568D259C81B700CDBB12 /* Assets.xcassets */,
-				BD23568F259C81B700CDBB12 /* LaunchScreen.storyboard */,
-				BD235692259C81B700CDBB12 /* Info.plist */,
+				BD8736F625A03393005795DB /* SupportingFiles */,
+				BD33B64D25A089E200A2505E /* Extension */,
+				BD33B65025A08D8D00A2505E /* MoyaService */,
+				BD33B64625A0462D00A2505E /* ValidationModel */,
+				BD8736F325A03359005795DB /* ViewModel */,
+				BD8736F525A03385005795DB /* ViewControllers */,
+				BD8736F725A033AF005795DB /* Storyboards */,
+				BD8736F425A0336C005795DB /* Resource */,
 			);
 			path = LoginRxSwift;
+			sourceTree = "<group>";
+		};
+		BD33B64625A0462D00A2505E /* ValidationModel */ = {
+			isa = PBXGroup;
+			children = (
+				BD33B64925A046BF00A2505E /* ValidationViewModel.swift */,
+				BD33B64725A0465100A2505E /* EmailValidationModel.swift */,
+				BD33B64B25A04A7D00A2505E /* PasswordValidationModel.swift */,
+			);
+			path = ValidationModel;
+			sourceTree = "<group>";
+		};
+		BD33B64D25A089E200A2505E /* Extension */ = {
+			isa = PBXGroup;
+			children = (
+				BD33B64E25A08A1900A2505E /* UIButton+Extension.swift */,
+				BD33B65325A099F400A2505E /* UIAlertViewController+Extension.swift */,
+			);
+			path = Extension;
+			sourceTree = "<group>";
+		};
+		BD33B65025A08D8D00A2505E /* MoyaService */ = {
+			isa = PBXGroup;
+			children = (
+				BD33B65125A08DC600A2505E /* UserServices.swift */,
+			);
+			path = MoyaService;
+			sourceTree = "<group>";
+		};
+		BD8736F325A03359005795DB /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+				BD8736FA25A0348C005795DB /* LoginViewModel.swift */,
+			);
+			path = ViewModel;
+			sourceTree = "<group>";
+		};
+		BD8736F425A0336C005795DB /* Resource */ = {
+			isa = PBXGroup;
+			children = (
+				BD23568D259C81B700CDBB12 /* Assets.xcassets */,
+			);
+			path = Resource;
+			sourceTree = "<group>";
+		};
+		BD8736F525A03385005795DB /* ViewControllers */ = {
+			isa = PBXGroup;
+			children = (
+				BD235688259C81B500CDBB12 /* ViewController.swift */,
+			);
+			path = ViewControllers;
+			sourceTree = "<group>";
+		};
+		BD8736F625A03393005795DB /* SupportingFiles */ = {
+			isa = PBXGroup;
+			children = (
+				BD235692259C81B700CDBB12 /* Info.plist */,
+				BD235684259C81B500CDBB12 /* AppDelegate.swift */,
+				BD235686259C81B500CDBB12 /* SceneDelegate.swift */,
+			);
+			path = SupportingFiles;
+			sourceTree = "<group>";
+		};
+		BD8736F725A033AF005795DB /* Storyboards */ = {
+			isa = PBXGroup;
+			children = (
+				BD23568F259C81B700CDBB12 /* LaunchScreen.storyboard */,
+				BD23568A259C81B500CDBB12 /* Main.storyboard */,
+			);
+			path = Storyboards;
 			sourceTree = "<group>";
 		};
 		F9B5C4537DB8EB4F679C213C /* Frameworks */ = {
@@ -207,8 +291,15 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				BD33B64825A0465100A2505E /* EmailValidationModel.swift in Sources */,
+				BD33B65225A08DC600A2505E /* UserServices.swift in Sources */,
+				BD8736FB25A0348C005795DB /* LoginViewModel.swift in Sources */,
+				BD33B65425A099F400A2505E /* UIAlertViewController+Extension.swift in Sources */,
 				BD235689259C81B500CDBB12 /* ViewController.swift in Sources */,
+				BD33B64A25A046BF00A2505E /* ValidationViewModel.swift in Sources */,
 				BD235685259C81B500CDBB12 /* AppDelegate.swift in Sources */,
+				BD33B64F25A08A1900A2505E /* UIButton+Extension.swift in Sources */,
+				BD33B64C25A04A7D00A2505E /* PasswordValidationModel.swift in Sources */,
 				BD235687259C81B500CDBB12 /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -355,7 +446,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
-				INFOPLIST_FILE = LoginRxSwift/Info.plist;
+				INFOPLIST_FILE = LoginRxSwift/SupportingFiles/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -373,7 +464,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
-				INFOPLIST_FILE = LoginRxSwift/Info.plist;
+				INFOPLIST_FILE = LoginRxSwift/SupportingFiles/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
